@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = ""
+baseURL = "/"
 title = "Easy QR - Easiest QR Generator"
 theme = "copper-hugo"
 # post pagination
