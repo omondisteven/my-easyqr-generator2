@@ -1,0 +1,233 @@
+{{ define "main" }}
+
+{{ if .Params.about_us.enable }}
+{{ with .Params.about_us }}
+<!-- start section -->
+<section class="section-padding" data-aos="fade-in">
+  <div class="container">
+    <div class="row align-items-center justify-content-around">
+      <div class="col-lg-5 col-md-8 col-sm-10 mb-5">
+        <h2 class="section-title">{{ .title | markdownify }}</h2>
+        <p class="pb-20 border-bottom mb-20">{{ .content | markdownify }}</p>
+        <ul class="check-list list-unstyled">
+          {{ range .bulletpoints }}
+          <li class="mb-15">
+            <svg width="16" height="11" viewBox="0 0 18 13" class="text-primary me-2" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 6.125L6.91892 11L16 2" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            {{ . | markdownify }}
+          </li>
+          {{ end }}
+        </ul>
+        <div class="col-lg-8 mt-8 mt-lg-0 anim-to-bottom">
+          {{ if .button.enable }}
+          {{ with .button }}
+          <a href="{{ .link | absLangURL }}" class="btn btn-primary has-icon"><strong>{{ .label }}</strong>
+            <span class="icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.5522 6.66669L20.5522 14.6667C21.0329 15.1473 21.0699 15.9036 20.6632 16.4267L20.5522 16.5523L12.5522 24.5523L10.6666 22.6667L17.7228 15.6095L10.6666 8.55231L12.5522 6.66669Z"
+                  fill="currentColor" />
+              </svg>
+            </span>
+          </a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-8 col-sm-10">
+        <div class="d-inline-block has-shadow shadow-right has-shapes">
+          {{ partial "image.html" (dict "Src" .image "Alt" "tools-use" "Class" `rounded-2`) }}
+          <div class="shape-1 shape-md bg-yellow rounded-circle"></div>
+          <div class="shape-2 shape-xl bg-cyan rounded-circle"></div>
+          <div class="shape-3 shape-lg bg-orange rounded-circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- end section -->
+
+{{"<!-- banner-feature -->" | safeHTML}}
+{{ if .Params.banner_feature.enable }}
+{{ with .Params.banner_feature }}
+<section class="section pt-0 position-relative pull-top">
+	<div class="container">
+		<div class="rounded shadow p-5 bg-white">
+			<div class="row justify-content-center">
+				<strong>{{ range .feature_item }}</strong>
+				<div class="col-md-4 mb-4 text-center">
+					<i class="{{ .icon }} icon text-primary h1"></i>
+					<p class="mt-4 text-capitalize h5 " style="font-weight: bolder; color: black; font-size: 16px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{.title }}</p>
+					<p style="font-size: 10; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: justify;">{{.content | markdownify }}</p>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+{{"<!-- /banner-feature -->" | safeHTML}}
+
+<!-- start of Qrcode applications tab -->
+{{ if .Params.applications_tab.enable }}
+{{ with .Params.applications_tab }}
+<section class="row section-padding applications_tab pt-0 overflow-hidden" data-aos="fade-in">
+  <div class="container h-100">
+    <div class="d-block d-lg-flex no-gutters align-items-center h-100">      
+      <div class="col-sm-5 col-lg-12 order-lg-0">
+        <div class="col-lg-12 align-items-center">
+          <h2 class="section-title" style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 10;">{{ .title | markdownify }}</h2>
+        <p style="text-align: center;">{{ .content | markdownify }}</p>
+        </div>        
+        <div class="col-lg-12 mt-10 mt-lg-12">                 
+            <div class="text-center colored-icon-box col-lg-12">
+              <ul class="nav nav-pills mb-20" id="pills-tab" role="tablist">
+                {{ range $i, $e:= .tablist }}              
+                    <li class="nav-item mb-10" role="presentation" style="height: 60px; background-color: rgb(236, 232, 232); border-style: solid; border-color: aliceblue;">
+                      <a class="nav-link {{if eq $i 0}}active{{end}}" id="pill-{{.title| urlize}}" data-bs-toggle="pill"
+                        href="#{{.title| urlize}}" role="tab" aria-controls="{{.title| urlize}}" aria-selected="true">
+                        <div class="row px-lg-6 py-4" data-aos-delay="{{mul $i 50}}" style="height: 60px;">
+                          <div class="icon-box align-items-center" style="height: 60px; width: 170px; margin-top: -10px; vertical-align: middle;">
+                            <div class="row align-items-center" style="float: left; vertical-align: middle;">
+                              <i class="{{ .icon }} icon" style="height: 15px;"></i>
+                            </div>
+                            <div class="row align-items-center">
+                              <p class="col font-weight-bold" style="vertical-align: middle; text-align: left; font-size: 12px; font-weight: bolder; color: black;">{{ .name | markdownify }}</p>
+                            </div>     
+                          </div>                        
+                        </div>                      
+                      </a>
+                    </li>                           
+                {{ end }}
+              </ul>
+            </div>
+              <div class="tab-content" id="pills-tabContent">
+                {{ range $i, $e:= .tablist }}  
+                  <div class="tab-pane fade {{if eq $i 0}}show active{{end}}" id="{{.title | urlize}}" role="tabpanel" aria-labelledby="pill-{{.title | urlize}}">
+                    <div class="col-lg-6 align-items-center" style="padding-top: 50px; float: left;">                    
+                      <div class="mt-4 mt-lg-0">
+                        <h2 class="section-title">{{ .title | markdownify }}</h2>
+                        <p class="mb-30">{{ .content | markdownify }}</p>                      
+                      </div> 
+                        {{ if .button.enable }}
+                        {{ with .button }}
+                        <a href="{{ .link | absLangURL }}" class="btn btn-primary has-icon">{{ .label }}
+                          <span class="icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M12.5522 6.66669L20.5522 14.6667C21.0329 15.1473 21.0699 15.9036 20.6632 16.4267L20.5522 16.5523L12.5522 24.5523L10.6666 22.6667L17.7228 15.6095L10.6666 8.55231L12.5522 6.66669Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                        </a>
+                        {{ end }}
+                        {{ end }}                       
+                    </div>
+                    <div class="col-lg-6" style="float: right; vertical-align: top; padding-left: 100px;">
+                      {{ partial "image.html" (dict "Src" .image "Alt" .image "Class" `rounded-lg shadow`) }}
+                    </div> 
+              </div>                            
+                {{ end }}            
+          </div>                       
+        </div>
+      </div>      
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- end of Qrcode applications tab -->
+
+<!-- start of features -->
+{{ if .Params.homepage_tab.enable }}
+{{ with .Params.homepage_tab }}
+<section class="section-padding how-it-works-tab pt-0 overflow-hidden" data-aos="fade-in">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-9 text-center mb-40">
+        <h2 class="section-title">{{ .title | markdownify }}</h2>
+        <p>{{ .content | markdownify }}</p>
+      </div>      
+      <div class="row colored-icon-box">
+        {{ range $i, $e:= .features }}
+        <div class="col-sm-4" data-aos-delay="{{mul $i 100}}">
+          <div class="col icon-box shadow px-lg-2 py-5" style="width: 400px; border-color: rgb(230, 228, 228); border-style: solid; border-width: thin; height: 250px;">
+            <div style="padding-top: 0%; padding-left: 60px; padding-right: 60px;">
+              <i class="{{ .icon }} icon"></i>
+            <p class="col font-weight-bolder" style="font-weight: bolder; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ .featuretitle | markdownify }}</p>
+            <p class="col" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: justify; font-size: 12px;">{{ .featurecontent | markdownify }}</p>
+            </div>            
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- end of features -->
+
+<!-- start of Frequently asked questions tab -->
+{{ if .Params.faq_tab.enable }}
+{{ with .Params.faq_tab }}
+<section class="section-padding faq-tab pt-0 overflow-hidden" data-aos="fade-in">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-9 text-center mb-40">
+        <h2 class="section-title">{{ .title | markdownify }}</h2>
+        <p>{{ .content | markdownify }}</p>
+      </div>
+      <div class="col-lg-11">
+        <ul class="nav nav-pills justify-content-center mb-20" id="pills-tab" role="tablist">
+          {{ range $i, $e:= .tablist }}
+          <li class="nav-item mb-20" role="presentation">
+            <a class="nav-link {{if eq $i 0}}active{{end}}" id="pill-{{.name| urlize}}" data-bs-toggle="pill"
+              href="#{{.name| urlize}}" role="tab" aria-controls="{{.name| urlize}}" aria-selected="true">
+              {{.name}}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent" style="height:fit-content;scroll-behavior: auto; scrollbar-highlight-color: aqua;">
+          {{ range $i, $e:= .tablist }}
+          <div class="tab-pane fade {{if eq $i 0}}show active{{end}}" id="{{.name | urlize}}" role="tabpanel"
+            aria-labelledby="pill-{{.name | urlize}}" style="scroll-behavior: auto; scrollbar-highlight-color: aqua;">
+            <div class="row align-items-center">
+              <ul class="list-unstyled">
+                {{ range .faqs }}
+                <div class="col-lg-12 mt-4 mt-lg-0 anim-to-bottom" style="padding-left: 120px; padding-right: 120px;">                     
+                      <li style="height: auto; border: 1px;background-color: rgb(242, 243, 243); border-bottom: 5px; border-top: 0px; border-left: 0px; border-right: 0px; border-style:solid; border-color:white; padding-left: 20px;">
+                        <details>
+                          <summary class="row">
+                            {{ with .question}}
+                            <p class="section-title" style="font-weight: bolder; font-size: 12px; color: black;">{{ . }}<span style="float:right; text-align: right; padding-right: 20px; color: red;">+</span></p>
+                            {{ end }}
+                          </summary>                    
+                          <div>
+                            <p class="mb-30" style="font-size: 11px;">{{ .answer | markdownify }}</p> 
+                          </div>     
+                        </details>               
+                    </li>                                                                    
+                </div>
+                {{ end }}
+              </ul>              
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- end of Frequently asked questions tab -->
+{{ end }}
