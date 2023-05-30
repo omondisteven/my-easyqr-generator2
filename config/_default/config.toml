@@ -36,3 +36,5 @@ rel = "manifest"
 [mediaTypes."text/netlify"]
 delimiter = ""
 suffixes = [""]
+
+canonifyURLs = true
