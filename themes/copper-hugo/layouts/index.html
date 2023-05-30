@@ -227,4 +227,34 @@
 {{ end }}
 {{ end }}
 <!-- end of Frequently asked questions tab -->
+
+<!-- subscription area -->
+{{ with .Params.subscription }}
+<section class="subscription-section bg-cover position-relative overlay"
+  style="background-image: url('{{"/images/callToaction.png" }}');">
+  <!-- {{ partial `bg-image.html` (dict `Src` .bg_image  ) | safeHTMLAttr }} -->
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 mx-auto text-center">
+          <h1 class="text-white mb-5 text-capitalize">{{ .title | markdownify }}</h1>
+          <p class="text-light mb-4 mx-lg-5 px-lg-5 content">{{ .content | markdownify }}</p>
+          {{ if .button_solid.enable }}
+          {{ with .button_solid }}
+          <a href="{{ .link | absLangURL }}" class="btn btn-primary m-2">{{ .label }}</a>
+          {{ end }}
+          {{ end }}
+
+          {{ if .button_outline.enable }}
+          {{ with .button_outline }}
+          <a href="{{ .link | absLangURL }}" class="btn btn-outline-primary m-2">{{ .label }}</a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</section>
+<!-- /subscription area -->
 {{ end }}

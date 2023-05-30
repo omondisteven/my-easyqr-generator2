@@ -40,20 +40,22 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 
 @import 'templates/main';
 
-@import 'templates/footer';
+// @import 'templates/footer';
 
 // @import 'preloader';
 
 // @import 'notice';
 
-// @import 'tabs';
+@import 'tabs';
 
-// @import 'image';
+@import 'image';
 
-// @import 'gallery';
+@import 'gallery';
 
-// @import 'social-share';
+@import 'social-share';
 
-// @import 'toc';
+@import 'toc';
 
 // @import 'custom';
+
+// @import 'images';

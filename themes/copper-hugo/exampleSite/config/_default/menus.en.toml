@@ -72,6 +72,10 @@
 
 # Footer menu
 [[footer]]
+title = "AI-powered QR codes, made simple"
+label = "Create my QR Code"
+
+[[footer]]
 name = "Faq"
 url = "faq/"
 weight = 1
