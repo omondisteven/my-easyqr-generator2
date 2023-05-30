@@ -3,7 +3,7 @@
 about_us:
   enable : true
   title : "**Smart QR codes, made simple**"
-  image : "images/calltoaction.png"  
+  image : "./images/calltoaction.png"  
   bulletpoints:
     - "Create dynamic, editable QR codes"
     - "Access comprehensive analytics"
