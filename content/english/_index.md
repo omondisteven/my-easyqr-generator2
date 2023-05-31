@@ -13,21 +13,6 @@ about_us:
     label : "Create my QR Code"
     link : "how-it-works"
 
-############################## about us2 ################################
-about_us2:
-  enable : true
-  title : "Who Are We And **What Is Our Identity?**"
-  image : "images/about/01.jpg"
-  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed. At vero eos et accusam et justo duo dolores"
-  bulletpoints:
-    - "Habit building in essential steps choose habit Good Things"
-    - "Get an overview of Habit Calendars admiral general."
-    - "Start building habit with Habitify on platform to new"
-  button:
-    enable : true
-    label : "Create my QR Code"
-    link : "how-it-works"
-
     ########################## features #########################
 features_new:
   enable : true  
