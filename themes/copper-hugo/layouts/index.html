@@ -236,7 +236,7 @@ style="margin: auto; height: 400px; background-image: url('{{ `images/about/qr6.
     <div class="container">
       <div class="row">
         <div class="col-md-10 mx-auto text-center">
-          <h1 class="text-white mb-5 text-capitalize" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 24px;font-weight: bolder;">{{ .title | markdownify }}</h1>
+          <h1 class="text-white mb-5 text-capitalize" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 26px;font-weight: bolder;">{{ .title | markdownify }}</h1>
           <p class="text-light mb-4 mx-lg-5 px-lg-5 content" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ .content | markdownify }}</p>
           
           <div class="col-lg-6" style="margin: auto;">
@@ -251,7 +251,6 @@ style="margin: auto; height: 400px; background-image: url('{{ `images/about/qr6.
             <a href="{{ .link | absLangURL }}" class="btn m-2" style="background-color: transparent; border-color: white;border-style: solid;">{{ .label }}</a>
             {{ end }}
             {{ end }}
-
           </div>          
         </div>
       </div>
