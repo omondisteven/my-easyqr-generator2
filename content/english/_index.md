@@ -316,7 +316,7 @@ faq_tab:
 
 ################################# subscription ##################################
 subscription:
-  bg_image: "images/calltoaction.png"
+  bg_image: "images/about/qr6.jpg"
   title : "Your all-in-one QR code marketing platform"
   content : "Now you can fully customize your QR codes with your brand colors and company logo. Get performance analytics and edit content whenever you like."
 
