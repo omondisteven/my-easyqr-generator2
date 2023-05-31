@@ -74,54 +74,6 @@
 {{ end }}
 <!-- end of new features section -->
 
-{{ if .Params.applications_tab_new.enable }}
-{{ with .Params.applications_tab_new }}
-<!-- start applications new section -->
-<section class="section-padding" data-aos="fade-in" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-  <div class="container">
-    <div class="row align-items-center justify-content-around">
-      <div class="col-lg-4 col-md-8 col-sm-10 mb-2" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        <h2 class="section-title">{{ .title | markdownify }}</h2>
-        <ul class="check-list list-unstyled">
-          {{ range .bulletpoints }}
-          <li class="mb-15">
-            <svg width="16" height="11" viewBox="0 0 18 13" class="text-primary me-2" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 6.125L6.91892 11L16 2" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-            {{ . | markdownify }}
-          </li>
-          {{ end }}
-        </ul>
-        <div class="col-lg-8 mt-8 mt-lg-0 anim-to-bottom">
-          {{ if .button.enable }}
-          {{ with .button }}
-          <a href="{{ .link | absLangURL }}" class="btn btn has-icon" style="background-color: coral;"><strong>{{ .label }}</strong>
-            <span class="icon" fill = "chocolate" style="background-color: coral;">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12.5522 6.66669L20.5522 14.6667C21.0329 15.1473 21.0699 15.9036 20.6632 16.4267L20.5522 16.5523L12.5522 24.5523L10.6666 22.6667L17.7228 15.6095L10.6666 8.55231L12.5522 6.66669Z"
-                  fill="currentColor" />
-              </svg>
-            </span>
-          </a>
-          {{ end }}
-          {{ end }}
-        </div>
-      </div>
-      <div class="col-lg-8 col-md-8 col-sm-10" style="float: right; padding-left: 30px;">
-        <div class="d-inline-block has-shadow shadow-right has-shapes">
-          {{ partial "image.html" (dict "Src" .image "Alt" .image "Class" `rounded-lg shadow`) }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-{{ end }}
-<!-- end section -->
-
 <!-- start of Qrcode applications tab -->
 {{ if .Params.applications_tab.enable }}
 {{ with .Params.applications_tab }}
@@ -151,7 +103,7 @@
               {{ end }}
             </ul>
           </div>
-          <div class="col-lg-6 align-items-center" style="height: 50px;">
+          <div class="col-lg-6 align-items-center" style="margin: auto;">
             <h2 class="section-title" style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 24px; font-weight: bolder;">{{ .title | markdownify }}</h2>
             <p style="text-align:justify; font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 10px; padding-bottom: 20px; padding-right: 20px;">{{ .content | markdownify }}</p>
           </div>  
