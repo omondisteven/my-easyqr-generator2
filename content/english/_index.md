@@ -3,7 +3,7 @@
 about_us:
   enable : true
   title : "**Smart QR codes, made simple**"
-  image : "images/about/01.jpg"
+  image : "images/about/01a.jpg"
   bulletpoints:
     - "Create dynamic, editable QR codes"
     - "Access comprehensive analytics"
