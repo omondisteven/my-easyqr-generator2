@@ -28,7 +28,7 @@ custom_script = ""
 
 # copyright
 theme_copyright = true
-copyright = "Copyright by your company" # also change copyright in language.toml file
+copyright = "Copyright (c)2023 Teevos Solutions" # also change copyright in language.toml file
 
 # Preloader
 [preloader]
