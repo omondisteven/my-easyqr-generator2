@@ -22,6 +22,10 @@ about_us2:
     - "Create dynamic, editable QR codes"
     - "Access comprehensive analytics"
     - "Choose from a variety of designs"
+  button:
+    enable : true
+    label : "Create my QR Code"
+    link : "how-it-works"
 
 
     ########################## features #########################
