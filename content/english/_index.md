@@ -325,11 +325,9 @@ subscription:
     enable : true
     label : "Sign up now"
     link : "about"
-
-  # button outline
-  button_outline:
-    enable : false
+  
+  button_solid1:
+    enable : true
     label : "Learn more"
-    link : "contact"
-            
+    link : "about"
 ---
