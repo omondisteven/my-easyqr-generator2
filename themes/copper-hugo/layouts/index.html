@@ -232,7 +232,8 @@
 <!-- subscription area -->
 {{ with .Params.subscription }}
 <section class="subscription-section col-lg-11 bg-cover position-relative overlay"
-style="margin: auto; height: 400px; background-image: url('{{ `images/about/qr6.jpg` }}');z-index: -1; background-color: darkslateblue;border-radius: 20px;padding: 20px;">
+style="margin: auto; height: 400px;background-image: url('images/about.qr6.jpg'); background-color: darkslateblue;border-radius: 20px;padding: 20px;">
+<!-- {{ partial `bg-image.html` (dict `Src` .background_image ) | safeHTMLAttr }} -->
   <div>
     <div class="container">
       <div class="row">
