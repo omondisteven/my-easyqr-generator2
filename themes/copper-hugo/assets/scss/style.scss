@@ -24,6 +24,10 @@ $font-primary: '{{replace (replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .fon
 $font-secondary: '{{replace (replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .font_secondary | default "Lato") "+" " "}}', {{.font_secondary_type | default "sans-serif"}};
 $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 {{ end }}
+
+.subscription-section {
+    background-image: url(./images/about/01c.jpg );
+}
  
 
 @import 'templates/bootstrap';
