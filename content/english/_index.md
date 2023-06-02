@@ -28,7 +28,7 @@ features_new:
   - featuretitle : "3.Download, print and share your QR"
     icon : "fas fa-file-export" # fontawesome icon : https://fontawesome.com/icons
     featurecontent: "Get your QR code in PNG, SVG or JPG format. Print it or share it digitally. It's as easy as that!"
-
+ 
 ########################## Qrcode applications #########################
 applications_tab:
   enable : true
@@ -40,6 +40,7 @@ applications_tab:
     icon : "fas fa-globe" # fontawesome icon : https://fontawesome.com/icons
     title : "**Website URL**"
     image : "images/websiteURL.png"
+    image1 : "images/websiteURL.png"
     content : "Your QR code will open any URL, website or webpage you link it to. By simply scanning your unique QR code with their smartphone, your users will conveniently open any website or webpage you chose. Easy, fast, professional!"
     button:
       enable : true
@@ -51,6 +52,7 @@ applications_tab:
     icon : "far fa-address-card" # fontawesome icon : https://fontawesome.com/icons
     title : "**vCard**"
     image : "images/vcard.png"
+    image1 : "images/vcard.png"
     content : "Enhance the value of your electronic business card by adding a QR code. This gives viewers an easy way to access more information about you or your company. An added bonus: you can edit the QR content whenever you like."
     button:
       enable : true
@@ -62,6 +64,7 @@ applications_tab:
     icon : "fab fa-facebook" # fontawesome icon : https://fontawesome.com/icons
     title : "**FaceBook**"
     image : "images/fb.png"
+    image1 : "images/fb.png"
     content : "Want more likes and shares? Boost the impact of your print media by adding a QR code that links to your Facebook page. It’s all about new ways to build your audience."
     button:
       enable : true
@@ -73,6 +76,7 @@ applications_tab:
     icon : "fas fa-briefcase" # fontawesome icon : https://fontawesome.com/icons
     title : "**Business Page**"
     image : "images/biz_page.png"
+    image1 : "images/biz_page.png"
     content : "Showcase your company information with a business page QR code. This simple, streamlined landing page can include your business details, opening hours and any other key info. Add a button to make booking an appointment effortless."
     button:
       enable : true
@@ -83,6 +87,7 @@ applications_tab:
     icon : "fab fa-google-play" # fontawesome icon : https://fontawesome.com/icons
     title : "**App**"
     image : "images/app.png"
+    image1 : "images/app.png"
     content : "By scanning a single QR code, anyone can install your app instantly from the App Store or Google Play. Full customization lets you match your code’s appearance to your brand so you stand out from the competition."
     button:
       enable : true
@@ -94,6 +99,7 @@ applications_tab:
     icon : "fas fa-text-height" # fontawesome icon : https://fontawesome.com/icons
     title : "**Simple Text**"
     image : "images/simpletext.png"
+    image1 : "images/simpletext.png"
     content : "From product descriptions to serial numbers to information cards, any text can be accessed immediately with a custom QR code. Make your product more engaging and change the content in real time."
     button:
       enable : true
@@ -105,6 +111,7 @@ applications_tab:
     icon : "fas fa-film" # fontawesome icon : https://fontawesome.com/icons
     title : "**Video**"
     image : "images/video.png"
+    image1 : "images/video.png"
     content : "Add a QR code to a brochure, poster, mailer or any other platform to unlock instant access to video content. Make your print media more dynamic, capture attention and boost your brand appeal."
     button:
       enable : true
@@ -116,6 +123,7 @@ applications_tab:
     icon : "fas fa-bars" # fontawesome icon : https://fontawesome.com/icons
     title : "**Menu**"
     image : "images/menu.png"
+    image1 : "images/menu.png"
     content : "Own a restaurant or bar? Use a QR code to link to a digital menu and make it easy to access your food and drink offering. You can make menu changes at any time, so it’s always up to date."
     button:
       enable : true
@@ -126,6 +134,7 @@ applications_tab:
     icon : "far fa-images" # fontawesome icon : https://fontawesome.com/icons
     title : "**Images**"
     image : "images/images.png"
+    image1 : "images/images.png"
     content : "If you’re in an industry that relies heavily on images to promote your brand, why not use a QR code to link to an image gallery in a snap? Showcase real estate, consumer goods, food and furniture with ease."
     button:
       enable : true
@@ -137,6 +146,7 @@ applications_tab:
     icon : "fas fa-file-pdf" # fontawesome icon : https://fontawesome.com/icons
     title : "**PDF**"
     image : "images/pdf.png"
+    image1 : "images/pdf.png"
     content : "Put all the information that matters at your clients' and customers' fingertips. With a customizable QR code, they can access PDF files rich with content. And after a quick download, they can easily share or save."
     button:
       enable : true
@@ -148,6 +158,7 @@ applications_tab:
     icon : "fas fa-thumbs-up" # fontawesome icon : https://fontawesome.com/icons
     title : "**Social Media**"
     image : "images/Social_Media.png"
+    image1 : "images/Social_Media.png"
     content : "One QR code can open the door to all of your social media channels. Make it simple for users to follow you on Facebook, Instagram, Twitter or wherever they like to hang out online."
     button:
       enable : true
@@ -159,6 +170,7 @@ applications_tab:
     icon : "fas fa-wifi" # fontawesome icon : https://fontawesome.com/icons
     title : "**Wi-Fi**"
     image : "images/wifi.png"
+    image1 : "images/wifi.png"
     content : "Avoid password problems by using a QR code to unlock Wi-Fi access. With a quick scan, customers can easily get on to your network. Fewer interruptions and super-fast connections will keep everyone happy."
     button:
       enable : true
@@ -316,7 +328,7 @@ faq_tab:
 
 ################################# subscription ##################################
 subscription:
-  background_image: "images/about/qr6.jpg"
+  # background_image: "images/about/qr6.jpg"
   title : "Your all-in-one QR code marketing platform"
   content : "Now you can fully customize your QR codes with your brand colors and company logo. Get performance analytics and edit content whenever you like."
 
