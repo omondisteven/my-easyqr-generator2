@@ -82,20 +82,20 @@
     <div class="d-block d-lg-flex no-gutters align-items-center h-100">
       <div class="tab-content" id="pills-tabContent" style="border: 0px;border-style:none;border-color: white;height: 750px">
         <!-- Title subsection -->
-        <div class="col-lg-6" style="height: 400px;">    
+        <div class="col-lg-6" style="height: 400px;margin-bottom: 80px">    
            <div class="align-items-center">
             <h2 class="section-title" style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 24px; font-weight: bolder;">{{ .title | markdownify }}</h2>
             <p style="text-align:justify; font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 10px; padding-bottom: 20px; padding-right: 20px;">{{ .content | markdownify }}</p>
           </div>
           <!-- tabs subsection -->
-          <div class="text-center colored-icon-box" style="position: relative;">
-            <ul class="nav nav-pills mb-20" id="pills-tab" role="tablist" style="justify-content: space-between; position: static;">
+          <div class="text-center colored-icon-box">
+            <ul class="nav nav-pills mb-20" id="pills-tab" role="tablist" style="justify-content: space-between;">
               {{ range $i, $e:= .tablist }}              
-                  <li class="nav-item mb-10 shadow" role="presentation" style="height: 80px; background-color: rgb(253, 253, 253); border-radius: 10px;">
+                  <li class="nav-item mb-10 shadow" role="presentation" style="height: 60px; background-color: rgb(253, 253, 253); border-radius: 10px;">
                     <a class="nav-link {{if eq $i 0}}active{{end}}"  id="pill-{{.title| urlize}}" data-bs-toggle="pill"
-                      href="#{{.title| urlize}}" role="tab" aria-controls="{{.title| urlize}}" aria-selected="true" style="height: auto;">
-                      <div class="row px-lg-6 py-4" data-aos-delay="{{mul $i 50}}" style="height: 40px;">
-                        <div class="icon-box align-items-center" style="height: 40px; width: 170px; margin-top: -10px; vertical-align: middle;">
+                      href="#{{.title| urlize}}" role="tab" aria-controls="{{.title| urlize}}" aria-selected="true">
+                      <div class="row px-lg-6 py-4" data-aos-delay="{{mul $i 50}}" style="height: 60px;">
+                        <div class="icon-box align-items-center" style="height: 60px; width: 170px; margin-top: -10px; vertical-align: middle;">
                           <div class="row align-items-center" style="float: left; vertical-align: middle;">
                             <i class="{{ .icon }} icon" style="height: 15px;"></i>
                           </div>
@@ -112,10 +112,10 @@
         </div>
         <!-- details and images subsection -->
         {{ range $i, $e:= .tablist }}       
-        <div class="col tab-pane fade {{if eq $i 0}}show active{{end}}" id="{{.title | urlize}}" role="tabpanel" aria-labelledby="pill-{{.title | urlize}}" style="margin-top: 80px">
-          <div class="col-lg-6 align-items-center" style="padding: 50px; float: left; border: 1px; border-color: gainsboro; border-style: dashed;position: relative;">                    
+        <div class="col tab-pane fade {{if eq $i 0}}show active{{end}}" id="{{.title | urlize}}" role="tabpanel" aria-labelledby="pill-{{.title | urlize}}">
+          <div class="col-lg-6 align-items-center" style="padding: 50px; float: left; border: 1px; border-color: gainsboro; border-style: dashed;">                    
              <!-- details div -->
-            <div class="mt-4 mt-lg-0" style="position: relative; top: 20px;">
+            <div class="mt-4 mt-lg-0">
               <h2 class="section-title" style="font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 24px;">{{ .title | markdownify }}</h2>
               <p class="mb-30" style="color: rgb(37, 37, 37);">{{ .content | markdownify }}</p>                      
             </div> 
@@ -151,9 +151,9 @@
 <!-- start of features -->
 {{ if .Params.homepage_tab.enable }}
 {{ with .Params.homepage_tab }}
-<section class="section-padding how-it-works-tab pt-0 overflow-hidden" data-aos="fade-in" style="position:static;">
+<section class="section-padding how-it-works-tab pt-0 overflow-hidden" data-aos="fade-in" style="margin-top: 80px;">
   <div class="container">
-    <div class="row justify-content-center" style="padding-top: 50px;">
+    <div class="row justify-content-center">
       <div class="col-lg-12 text-center mb-40 align-items-center" style="text-align: center;">
         <h2 class="col-lg-8 section-title" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; font-size: 24px; display: inline-block;">{{ .title | markdownify }}</h2>
         <p class="col-lg-6" style="display: inline-block;">{{ .content | markdownify }}</p>
