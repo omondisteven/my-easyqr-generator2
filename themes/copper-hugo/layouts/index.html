@@ -135,7 +135,7 @@
             {{ end }}                       
           </div>
           <!-- images div -->
-          <div style="position: relative;bottom: 400px;margin: auto;float:right;">
+          <div style="position: relative;bottom: 400px;margin: auto;float:right;flex-wrap: wrap;">
             {{ partial "image.html" (dict "Src" .image "Alt" .image "Class" `rounded-lg shadow`) }}
           </div> 
         </div>
@@ -240,7 +240,6 @@
 {{ $image1 := resources.Get "images/about/qr6.jpg" }}
 <section class="subscription-section col-lg-11 bg-cover position-relative overlay"
 style="margin: auto; height: 400px;background-image:url('{{ $image1.RelPermalink }}'); background-color: darkslateblue;border-radius: 20px;padding: 20px;">
-<!-- {{ partial `bg-image.html` (dict `Src` .background_image ) | safeHTMLAttr }} -->
   <div>
     <div class="container">
       <div class="row">

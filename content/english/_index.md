@@ -50,7 +50,7 @@ applications_tab:
   - name : "vCard"
     icon : "far fa-address-card" # fontawesome icon : https://fontawesome.com/icons
     title : "**vCard**"
-    image : "images/vcard.png"
+    image : "images/VCard.png"
     content : "Enhance the value of your electronic business card by adding a QR code. This gives viewers an easy way to access more information about you or your company. An added bonus: you can edit the QR content whenever you like."
     button:
       enable : true
@@ -93,7 +93,7 @@ applications_tab:
   - name : "Simple Text"
     icon : "fas fa-text-height" # fontawesome icon : https://fontawesome.com/icons
     title : "**Simple Text**"
-    image : "images/simpletext.png"
+    image : "images/simpleText.png"
     content : "From product descriptions to serial numbers to information cards, any text can be accessed immediately with a custom QR code. Make your product more engaging and change the content in real time."
     button:
       enable : true
@@ -147,7 +147,7 @@ applications_tab:
   - name : "Social Media"
     icon : "fas fa-thumbs-up" # fontawesome icon : https://fontawesome.com/icons
     title : "**Social Media**"
-    image : "images/Social_Media.png"
+    image : "images/social_media.png"
     content : "One QR code can open the door to all of your social media channels. Make it simple for users to follow you on Facebook, Instagram, Twitter or wherever they like to hang out online."
     button:
       enable : true
