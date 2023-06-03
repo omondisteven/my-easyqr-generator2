@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row align-items-center justify-content-around">
       <div class="col-lg-4 col-md-8 col-sm-10 mb-2" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        <h2 class="section-title">{{ .title | markdownify }}</h2>
+        <h2 class="section-title" style="color: black;">{{ .title | markdownify }}</h2>
         <ul class="check-list list-unstyled">
           {{ range .bulletpoints }}
           <li class="mb-15">
@@ -84,7 +84,7 @@
         <!-- Title subsection -->
         <div class="col-lg-6" style="height: 400px;margin-bottom: 80px">    
            <div class="align-items-center">
-            <h2 class="section-title" style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 24px; font-weight: bolder;">{{ .title | markdownify }}</h2>
+            <h2 class="section-title" style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 24px; font-weight: bolder;color: black;">{{ .title | markdownify }}</h2>
             <p style="text-align:justify; font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 10px; padding-bottom: 20px; padding-right: 20px;">{{ .content | markdownify }}</p>
           </div>
           <!-- tabs subsection -->
@@ -155,7 +155,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-12 text-center mb-40 align-items-center" style="text-align: center;">
-        <h2 class="col-lg-8 section-title" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; font-size: 24px; display: inline-block;">{{ .title | markdownify }}</h2>
+        <h2 class="col-lg-8 section-title" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; font-size: 24px; display: inline-block;color: black;">{{ .title | markdownify }}</h2>
         <p class="col-lg-6" style="display: inline-block;">{{ .content | markdownify }}</p>
       </div>      
       <div class="row colored-icon-box">
@@ -185,7 +185,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-9 text-center mb-40">
-        <h2 class="section-title" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ .title | markdownify }}</h2>
+        <h2 class="section-title" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: black;">{{ .title | markdownify }}</h2>
         <p>{{ .content | markdownify }}</p>
       </div>
       <div class="col-lg-11">
@@ -250,7 +250,9 @@ style="margin: auto; height: 400px;background-image:url('{{ $image1.RelPermalink
           <div class="col-lg-6" style="margin: auto;">
             {{ if .button_solid.enable }}
             {{ with .button_solid }}
-            <a href="{{ .link | absLangURL }}" class="btn m-2" style="background-color: coral;border-color: coral;border-style: solid;">{{ .label }}</a>
+            <!-- <a href="{{ .link | absLangURL }}" class="btn m-2" style="background-color: coral;border-color: coral;border-style: solid;">{{ .label }}</a> -->
+            <a {{if .link}}href="{{.link | relLangURL}}" {{else}}data-bs-toggle="modal" data-bs-target="#signup-modal"
+            {{end}} class="btn btn-sm" style="background-color: coral;border-color: coral;border-style: solid;">{{ .label }}</a>
             {{ end }}
             {{ end }}
 

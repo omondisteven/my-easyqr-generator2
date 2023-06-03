@@ -324,7 +324,6 @@ subscription:
   button_solid:
     enable : true
     label : "Sign up now"
-    link : "about"
   
   button_solid1:
     enable : true
