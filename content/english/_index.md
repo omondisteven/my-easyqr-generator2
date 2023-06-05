@@ -249,7 +249,7 @@ homepage_tab:
     icon : "fas fa-retweet" # fontawesome icon : https://fontawesome.com/icons
     featurecontent: "No matter what medium you print or display our QR codes on, they’ll maintain high resolution. Download in JPG, PNG or SVG. And change the content whenever you want."
 
-########################## Frequently asked questions #########################
+########################## Frequently asked questions- desktop #########################
 faq_tab:
   enable : true
   title : "**Frequently asked questions**"
@@ -314,6 +314,74 @@ faq_tab:
       
     - question : "Can you track QR code scans?"
       answer : "Yes. It is possible to track dynamic QR codes to see how many times they’ve been scanned. Advanced analytics can even tell you about the time, location and date of QR scans, as well as the device used to scan the code." 
+
+########################## Frequently asked questions- mobile #########################
+faq_tab_mobile:
+  enable : true
+  title : "**Frequently asked questions**"
+  content : "Get answers to your questions about QR codes."
+  tablist:
+  # tab item
+  - name : "Basics"
+    faqs:
+    - question : "What is QR Code generatior"
+      answer : "A QR code generator is software that can be used to create customized QR codes that store specific data. Anyone who scans the code can then access content and platforms, such as websites, restaurant menus, PDF files, videos, Wi-Fi networks or social media channels."
+
+    - question : "Can anyone create a QR code?"
+      answer : "Yes. MyQRCode makes it easy to create your own personalized QR code with just a few clicks. No special programming knowledge is required. Anyone can take advantage of our advanced QR code technology, simplified for everyday use."
+
+    - question : "Are QR code free?"
+      answer : "Some basic QR code generators are free to use, but they have limitations. You may not be able to edit content or track QR code performance on free versions. The most effective QR code tools enable you to customize the code, track results and link to nearly any digital content."
+   
+    - question : "Can I use QR codes for commercial purposes?"
+      answer : "Yes. QR codes can be used to promote and add value to any business, organization or brand. They can be an effective addition to commercial and marketing campaigns. There’s no limit to the QR possibilities and there aren’t any use restrictions either."
+
+    - question : "What kind of information can be stored on  QR code?"
+      answer : "Nearly any type of digital content can be stored in a QR code. This means they can provide access to anything from PDF files, websites and app stores to videos and even Wi-Fi networks."
+
+    - question : "Do QR codes expire?"
+      answer : "No. QR codes do not have an expiration date. Each QR code is programmed with a link to digital content. It is possible to “pause” this link, but as long as it is active, the QR code will work. MyQRCode keeps your QR code active for as long as you need it."
+
+  # tab item
+  - name : "Creating & Designing"
+    faqs:
+    - question : "What is the difference between Statis and Dynamic DR codes?"
+      answer : "Static QR codes cannot be changed or overwritten. Once a static QR code has been generated, the destination link or content is fixed – it cannot be edited. Dynamic QR codes, on the other hand, link to content that can be changed at any time (even after the QR code has been printed)."
+    
+    - question : "Can QR codes be created in different colors? Can you customize QR codes?"
+      answer : "Static QR codes cannot be changed or overwritten. Once a static QR code has been generated, the destination link or content is fixed – it cannot be edited. Dynamic QR codes, on the other hand, link to content that can be changed at any time (even after the QR code has been printed)."
+
+    - question : "Can I edit my QR code?"
+      answer : "Yes. Dynamic QR codes can be edited. You can change the destination link of the code and the content at that destination. You can also edit the appearance of the QR code while maintaining the same functionality.."
+
+    - question : "Is there a limit to how many QR codes I can generate?"
+      answer : "No, there is no limit. You can create as many QR codes as you like. If you run a business with thousands of products in stock, you can generate a unique QR code for each and every item. This is how QR codes can help with inventory tracking."
+
+    - question : "In what file formats can QR cods be generated?"
+      answer : "QR codes can be generated as PNG, JPG or SVG files. What’s more, each individual QR code can be downloaded in multiple different file formats."
+    
+    # tab item
+  - name : "Scanning & Printing"
+    faqs:
+    - question : "How do you scan a QR code?"
+      answer : "Most Android and iOS devices have a QR code reader built into the camera. If your smartphone does not have a QR code reader, you can download an app that will enable your device to read QR codes."
+    
+    - question : "What's the smallest QR code size for print?"
+      answer : "Your QR code should not be smaller than 1 cm x 1 cm. Some QR code scanners may not be able to read codes if they’re smaller than this. The distance between the code and the scanner also affects acceptable code sizes. It’s always a good idea to test your code by scanning it before you print a large number of copies."
+
+    - question : "What's the best format for printing QR codes?"
+      answer : "If you’re printing QR codes, you’ll get better results if you export the image in SVG format. This format scales well and you shouldn’t lose image quality when the code is enlarged."
+
+    - question : "What's the best format for web-based QR codes?"
+      answer : "For QR codes displayed on the web (for example, in an email, on a website or mobile app), you can export the code in PNG or JPG format. These formats also work well for small-size print jobs, such as business cards."
+      
+    - question : "Can I place QR code for my website? Can people scan website-based QR codes?"
+      answer : "Most Android and iOS devices have a QR code reader built into the camera. If your smartphone does not have a QR code reader, you can download an app that will enable your device to read QR codes."
+      
+    - question : "Can you track QR code scans?"
+      answer : "Yes. It is possible to track dynamic QR codes to see how many times they’ve been scanned. Advanced analytics can even tell you about the time, location and date of QR scans, as well as the device used to scan the code." 
+
+
 
 ################################# subscription ##################################
 subscription:
