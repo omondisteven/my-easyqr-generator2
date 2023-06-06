@@ -203,10 +203,63 @@
 {{ end }}
 <!-- end of Qrcode applications tab -->
 
-<!-- start of features -->
-{{ if .Params.homepage_tab.enable }}
-{{ with .Params.homepage_tab }}
-<section class="section-padding how-it-works-tab pt-0 overflow-hidden" data-aos="fade-in">
+<!-- start of features-section for mobile-->
+<div class="d-block d-sm-none">
+  {{ if .Params.features_mobile.enable }}
+  {{ with .Params.features_mobile }}
+  <section class="section-padding pt-0 testimonials-section has-shapes">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-9 text-center mb-30">
+          <h2 class="col-lg-8 section-title" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; font-size: 24px; display: inline-block;color: black;">{{ .title | markdownify }}</h2>
+        <p class="col-lg-6" style="display: inline-block;">{{ .content | markdownify }}</p>
+        </div> 
+      </div>
+      <div class="colored-icon-box">
+        <div class="col col-md-12">
+          <div class="testimonials-carousel">
+            {{ range .testimonial_item }}
+            <div class="col-sm-4" style="text-align: center;">
+              <div class="col icon-box shadow px-lg-2 py-5" style="text-align: center; border-color: rgb(230, 228, 228); border-style: solid; border-width: thin;margin-left: 40px;margin-right: 40px;">
+                <div>
+                  <i class="col {{ .icon }} icon" style="height: 50px;width: 40px;text-align: center;"></i>
+                </div>
+                <div>
+                  <p class="col font-weight-bolder" style="font-weight: bolder; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ .name | markdownify }}</p>
+              <p class="col" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; font-size: 12px;">{{ .content | markdownify }}</p>
+                </div>                
+            </div></div>            
+            {{ end }}
+          </div>
+        </div>
+        {{ if .button.enable }}
+        {{ with .button }}
+        <div class="col-md-12">
+          <div class="mt-50 text-center">
+            <a href="{{ .link | absLangURL }}" class="btn btn-primary has-icon">{{ .label }}
+              <span class="icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.5522 6.66669L20.5522 14.6667C21.0329 15.1473 21.0699 15.9036 20.6632 16.4267L20.5522 16.5523L12.5522 24.5523L10.6666 22.6667L17.7228 15.6095L10.6666 8.55231L12.5522 6.66669Z"
+                    fill="currentColor" />
+                </svg></span>
+            </a>
+          </div>
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+  {{ end }}
+</div>
+<!-- end of features-section for mobile-->
+
+<!-- start of features-section for desktop-->
+{{ if .Params.features_desktop.enable }}
+{{ with .Params.features_desktop }}
+<section class="d-none d-sm-block section-padding how-it-works-tab pt-0 overflow-hidden" data-aos="fade-in">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-12 text-center mb-40 align-items-center" style="text-align: center;">
@@ -219,8 +272,8 @@
           <div class="col icon-box shadow px-lg-2 py-5" style="width: 400px; border-color: rgb(230, 228, 228); border-style: solid; border-width: thin; height: 250px;">
             <div style="padding-top: 0%; padding-left: 60px; padding-right: 60px; justify-content: center;">
               <i class="{{ .icon }} icon"></i>
-            <p class="col font-weight-bolder" style="font-weight: bolder; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ .featuretitle | markdownify }}</p>
-            <p class="col" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: justify; font-size: 12px;">{{ .featurecontent | markdownify }}</p>
+              <p class="col font-weight-bolder" style="font-weight: bolder; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ .featuretitle | markdownify }}</p>
+              <p class="col" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: justify; font-size: 12px;">{{ .featurecontent | markdownify }}</p>
             </div>            
           </div>
         </div>
@@ -231,7 +284,7 @@
 </section>
 {{ end }}
 {{ end }}
-<!-- end of features -->
+<!-- end of features-section for desktop -->
 
 <!-- start of Frequently asked questions desktop tab -->
 {{ if .Params.faq_tab.enable }}

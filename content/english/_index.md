@@ -166,61 +166,39 @@ applications_tab:
       label : "Create QR Codes"
       link : "how-it-works"      
 
-############################ New Banner ##################################
-new_banner:
+############################# features_mobile ############################
+features_mobile:
   enable : true
-  title : "**A QR code for every need**"
-  content : No matter what type of content you want to share, you’ll find a QR code that suits you. Click through the icons below to explore your options and view examples.
-  image : "images/image02.png"
-  video:
-    enable : false
-    video_embed_link : "https://www.youtube.com/embed/dyZcRRWiuuw"
-  services:
-  - name : "Website URL"
+  title : "**Myqrcode.com™, the most advanced QR code generator**"
+  content :  "Packed with powerful features, our easy-to-use QR code tool helps improve the impact of your marketing, enhance customer experience and increase engagement."
+  
+  testimonial_item:
+  - name : "No website needed"
     icon : "fas fa-globe" # fontawesome icon : https://fontawesome.com/icons
+    content : "No website? No worries. We have created specific, customizable built-in landing pages for all our QR codes."
     
-  - name : "vCard"
-    icon : "far fa-address-card" # fontawesome icon : https://fontawesome.com/icons
+  - name : "The smartest QR code around"
+    icon : "fas fa-qrcode" # fontawesome icon : https://fontawesome.com/icons
+    content : "We have combined Artificial Intelligence and design to create utterly flawless QR codes. They can easily be read by any device on earth."
     
-  - name : "FaceBook"
-    icon : "fab fa-facebook" # fontawesome icon : https://fontawesome.com/icons
+  - name : "Infinite customization options"
+    icon : "fas fa-prescription-bottle" # fontawesome icon : https://fontawesome.com/icons
+    content : "No more boring black-and-white QR codes. Add your company logo and attract more scans by tailor-making your QR code with our endless array of easy-to-use customization options."
     
-  - name : "Business Page"
-    icon : "fas fa-briefcase" # fontawesome icon : https://fontawesome.com/icons
-
-  - name : "App"
-    icon : "fab fa-google-play" # fontawesome icon : https://fontawesome.com/icons
-    
-  - name : "Simple Text"
-    icon : "fas fa-text-height" # fontawesome icon : https://fontawesome.com/icons
-    
-  - name : "Video"
-    icon : "fas fa-film" # fontawesome icon : https://fontawesome.com/icons
-    
-  - name : "Menu"
+  - name : "12+ different QR code types"
     icon : "fas fa-bars" # fontawesome icon : https://fontawesome.com/icons
+    content : "No matter your QR code need, we’ve got you covered. Create a QR code for something as simple as an image or as complex as a full restaurant menu."
 
-  - name : "Images"
-    icon : "far fa-images" # fontawesome icon : https://fontawesome.com/icons
+  - name : "Keep track of everything"
+    icon : "fas fa-laptop" # fontawesome icon : https://fontawesome.com/icons
+    content : "Our state-of-the-art analytics dashboard provides you with actionable insights about everything, including how many times your QR codes were scanned, where and when."
     
-  - name : "PDF"
-    icon : "fas fa-file-pdf" # fontawesome icon : https://fontawesome.com/icons
-    
-  - name : "Social Media"
-    icon : "fas fa-thumbs-up" # fontawesome icon : https://fontawesome.com/icons
-    
-  - name : "Wi-Fi"
-    icon : "fas fa-wifi" # fontawesome icon : https://fontawesome.com/icons
- 
-  title1 : "**vCard**"
-  content1 : "Enhance the value of your electronic business card by adding a QR code. This gives viewers an easy way to access more information about you or your company. An added bonus: you can edit the QR content whenever you like."
-  button:
-    enable : true
-    label : "Create QR Code"
-    link : "how-it-works" 
+  - name : "Download, share, edit"
+    icon : "fas fa-retweet" # fontawesome icon : https://fontawesome.com/icons
+    content : "No matter what medium you print or display our QR codes on, they’ll maintain high resolution. Download in JPG, PNG or SVG. And change the content whenever you want."
 
-########################## features #########################
-homepage_tab:
+########################## features-desktop #########################
+features_desktop:
   enable : true
   title : "**Myqrcode.com™, the most advanced QR code generator**"
   content : "Packed with powerful features, our easy-to-use QR code tool helps improve the impact of your marketing, enhance customer experience and increase engagement."
