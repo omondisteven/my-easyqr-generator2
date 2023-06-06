@@ -261,9 +261,9 @@
           <div class="d-block d-sm-none">
             <ul class="nav nav-pills justify-content-center mb-20" id="pills-tab" role="tablist">
               {{ range $i, $e:= .tablist }}
-              <li class="nav-item mb-20" role="presentation">
+              <li class="nav-item mb-20" role="presentation" style="background-color: rgb(253, 247, 247);color: white;border-radius: 10px;">
                 <a class="nav-link {{if eq $i 0}}active{{end}}" id="pill-{{.name| urlize}}" data-bs-toggle="pill"
-                  href="#{{.name| urlize}}" role="tab" aria-controls="{{.name| urlize}}" aria-selected="true" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 16px;font-weight: bolder;color: black; justify-content: space-between;width: 120px;vertical-align: middle;">
+                  href="#{{.name| urlize}}" role="tab" aria-controls="{{.name| urlize}}" aria-selected="true" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 16px;font-weight: bolder;color: black; justify-content: space-between;width: 120px;height: 70px;">
                   {{.name}}
                 </a>          
               </li>
