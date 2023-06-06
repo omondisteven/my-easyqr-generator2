@@ -72,12 +72,12 @@
           </div>
         </div>
         <!-- mobile view -->
-        <div class="d-block d-sm-none col-sm-4" data-aos-delay="{{mul $i 100}}" style="text-align: center;">
-          <div class="col icon-box shadow px-lg-2 py-5" style="width: 420px; height: 250px;">
-            <div style="padding-top: 0%; padding-left: 20px; padding-right: 20px;">
+        <div class="d-block d-sm-none col-sm-4" data-aos-delay="{{mul $i 100}}" style="text-align: center;padding: 30px;">
+          <div class="col icon-box shadow px-lg-2 py-5">
+            <div style="padding-top: 0%; text-align: center;">
               <i class="{{ .icon }} icon"></i>
-            <p class="col font-weight-bolder" style="font-weight: bolder; font-size: 20px; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ .featuretitle | markdownify }}</p>
-            <p class="col" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: justify; font-size: 16px;">{{ .featurecontent | markdownify }}</p>
+              <p class="col font-weight-bolder" style="font-weight: bolder; font-size: 20px; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ .featuretitle | markdownify }}</p>
+              <p class="col" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; font-size: 15px;">{{ .featurecontent | markdownify }}</p>
             </div>            
           </div>
         </div>
@@ -215,7 +215,7 @@
       </div>      
       <div class="row colored-icon-box">
         {{ range $i, $e:= .features }}
-        <div class="col-sm-4" data-aos-delay="{{mul $i 100}}">
+        <div class="col-sm-4" data-aos-delay="{{mul $i 100}}" style="margin: auto;">
           <div class="col icon-box shadow px-lg-2 py-5" style="width: 400px; border-color: rgb(230, 228, 228); border-style: solid; border-width: thin; height: 250px;">
             <div style="padding-top: 0%; padding-left: 60px; padding-right: 60px; justify-content: center;">
               <i class="{{ .icon }} icon"></i>

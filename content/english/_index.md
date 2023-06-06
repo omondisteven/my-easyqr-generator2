@@ -217,7 +217,7 @@ new_banner:
   button:
     enable : true
     label : "Create QR Code"
-    link : "how-it-works"
+    link : "how-it-works" 
 
 ########################## features #########################
 homepage_tab:
