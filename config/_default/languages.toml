@@ -6,7 +6,7 @@ contentDir = "content/english"
 weight = 1
 footer_content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna aliquyam eratnonumy onsetetur"
 # copyright
-copyright = "(c) 2023 - Teevos Solutions"
+copyright = "Designed by (c)2023 Teevos Solutions"
 
 
 
@@ -18,4 +18,4 @@ contentDir = "content/french"
 weight = 2
 footer_content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna aliquyam eratnonumy onsetetur"
 # copyright
-copyright = "(c) 2023 - Teevos Solutions"
+copyright = "Designed by (c)2023 Teevos Solutions"
