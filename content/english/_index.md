@@ -236,7 +236,7 @@ faq_tab:
   # tab item
   - name : "Basics"
     faqs:
-    - question : "What is QR Code generatior"
+    - question : "What is QR Code generator"
       answer : "A QR code generator is software that can be used to create customized QR codes that store specific data. Anyone who scans the code can then access content and platforms, such as websites, restaurant menus, PDF files, videos, Wi-Fi networks or social media channels."
 
     - question : "Can anyone create a QR code?"
@@ -302,7 +302,7 @@ faq_tab_mobile:
   # tab item
   - name : "Basics"
     faqs:
-    - question : "What is QR Code generatior"
+    - question : "What is QR Code generator"
       answer : "A QR code generator is software that can be used to create customized QR codes that store specific data. Anyone who scans the code can then access content and platforms, such as websites, restaurant menus, PDF files, videos, Wi-Fi networks or social media channels."
 
     - question : "Can anyone create a QR code?"
