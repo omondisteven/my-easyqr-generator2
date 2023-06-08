@@ -25,7 +25,7 @@
         <div class="col-lg-6 mt-8 mt-lg-0 anim-to-bottom">
           {{ if .button.enable }}
           {{ with .button }}
-          <a href="{{ .link | absLangURL }}" class="btn btn has-icon" style="width:100%; background-color: coral;font-size: 20px;padding-left: 5px;padding-right: 5px;"><strong>{{ .label }}</strong>           
+          <a href="{{ .link | absLangURL }}" class="btn btn has-icon" style="width:100%; background-color: coral;font-size: 22px;font-weight: bold; padding-left: 5px;padding-right: 5px;"><strong>{{ .label }}</strong>           
           </a>
           {{ end }}
           {{ end }}
@@ -162,25 +162,9 @@
             {{ if .button.enable }}
             {{ with .button }}
             <!-- desktop view -->
-            <a href="{{ .link | absLangURL }}" class="btn btn has-icon d-none d-sm-block" style="background-color: coral;width: fit-content;">{{ .label }}
-              <span class="icon" style="background-color: coral;">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color: coral;">
-                  <path
-                    d="M12.5522 6.66669L20.5522 14.6667C21.0329 15.1473 21.0699 15.9036 20.6632 16.4267L20.5522 16.5523L12.5522 24.5523L10.6666 22.6667L17.7228 15.6095L10.6666 8.55231L12.5522 6.66669Z"
-                    fill="currentColor" />
-                </svg>
-              </span>
-            </a>
+            <a href="{{ .link | absLangURL }}" class="btn btn has-icon d-none d-sm-block" style="background-color: coral;width: fit-content;font-size: 22px;font-weight: bold;">{{ .label }}</a>
             <!-- mobile view -->
-            <a href="{{ .link | absLangURL }}" class="btn btn has-icon d-block d-sm-none" style="background-color: coral;width: 100%;">{{ .label }}
-              <span class="icon" style="background-color: coral;">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color: coral;">
-                  <path
-                    d="M12.5522 6.66669L20.5522 14.6667C21.0329 15.1473 21.0699 15.9036 20.6632 16.4267L20.5522 16.5523L12.5522 24.5523L10.6666 22.6667L17.7228 15.6095L10.6666 8.55231L12.5522 6.66669Z"
-                    fill="currentColor" />
-                </svg>
-              </span>
-            </a>
+            <a href="{{ .link | absLangURL }}" class="btn btn has-icon d-block d-sm-none" style="background-color: coral;width: 100%;">{{ .label }}</a>
             {{ end }}
             {{ end }}                       
           </div>
@@ -259,7 +243,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-12 text-center mb-40 align-items-center" style="text-align: center;">
         <h2 class="col-lg-8" style="text-align: center; font-size: 24px; display: inline-block;color: black;">{{ .title | markdownify }}</h2>
-        <p class="col-lg-6" style="display: inline-block;">{{ .content | markdownify }}</p>
+        <p class="col-lg-5" style="display: inline-block;">{{ .content | markdownify }}</p>
       </div>      
       <div class="row colored-icon-box">
         {{ range $i, $e:= .features }}
@@ -286,7 +270,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-9 text-center mb-40">
-        <h2 style="color: black;">{{ .title | markdownify }}</h2>
+        <p style="color: black;font-size: 26px;font-weight: bolder;">{{ .title | markdownify }}</p>
         <p>{{ .content | markdownify }}</p>
       </div>
       <div class="col-lg-11">
@@ -328,7 +312,7 @@
                   <div class="col-lg-10 mt-4 mt-lg-0 anim-to-bottom" style="padding-bottom: 10px;margin: auto; ">                     
                     <li style="height: auto; background-color: rgb(242, 243, 243); padding-left: 40px; padding-right: 10px;padding-bottom: 5px;border-radius: 10px;">                    
                       <details>
-                        <summary style="list-style-position: outside; height: 50px;padding-top: 15px;">                        
+                        <summary style="list-style-position: outside; height: 60px;padding-top: 15px;">                        
                           {{ with .question}}
                           <p style="font-weight: bolder;font-size: 16px; color: black;">{{ . }}</p>
                           {{ end }}
@@ -384,7 +368,7 @@ style="margin: auto; height: 400px;background-image:url('{{ $image1.RelPermalink
     <div class="container">
       <div class="row">
         <div class="col-md-10 mx-auto text-center">
-          <h1 class="text-white mb-5 text-capitalize" style="font-size: 26px;font-weight: bolder;">{{ .title | markdownify }}</h1>
+          <p class="text-white mb-5" style="font-size: 30px;font-weight: bolder;"><strong>{{ .title | markdownify }}</strong></p>
           <p class="text-light mb-4 mx-lg-5 px-lg-5 content">{{ .content | markdownify }}</p>
           
           <div class="col-lg-6" style="margin: auto;">
