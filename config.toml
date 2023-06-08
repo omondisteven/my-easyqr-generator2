@@ -36,16 +36,15 @@ font_size = "16px" # default is 16px
 # "augmentedFourth": 1.414,
 # "perfectFifth": 1.5,
 # "goldenRatio": 1.618
-font_scale = "1.25" # default is "majorThird": 1.25
+font_scale = "1.618" # default is "goldenRatio": 1.618
 
 # go to https://fonts.google.com/ to find the font you want to use. select your font and copy only the bold part from the URL. and paste it here.
 # example: "Work+Sans:wght@400;500;600"
 font_icon = "Font Awesome 6 Free" # https://fontawesome.com/v6.0/icons/
-font_primary = "Quicksand:wght@400;500;600;700" 
-font_primary_type = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-# font_primary_type = "sans-serif" # [serif/sans-serif]
+font_primary = "Rubik:wght@300;400;500;600;700"
+font_primary_type = "sans-serif" # [serif/sans-serif]
 font_secondary = "" 
-font_secondary_type = "" # [serif/sans-serif]
+font_secondary_type = "serif" # [serif/sans-serif]
 
 ############################# Plugins ##############################
 
