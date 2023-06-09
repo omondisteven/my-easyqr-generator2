@@ -16,7 +16,8 @@ about_us:
 
     ########################## features #########################
 features_new:
-  enable : true  
+  enable : true
+  title : "3 easy steps to create your custom QR code"
   features_new_items:
   - featuretitle : "1.Choose your QR code content"
     icon : "fas fa-qrcode" # fontawesome icon : https://fontawesome.com/icons

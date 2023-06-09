@@ -3,7 +3,7 @@
 {{ if .Params.about_us.enable }}
 {{ with .Params.about_us }}
 <!-- start section -->
-<section class="section-padding" data-aos="fade-in">
+<section class="section-padding" style="padding-top: 30px;" data-aos="fade-in">
   <div class="container">
     <div class="row align-items-center justify-content-around">
       <div class="col-lg-6 col-md-8 col-sm-10 mb-2" style="margin-bottom: 100px;">
@@ -37,7 +37,7 @@
           {{ partial "image.html" (dict "Src" .image "Alt" .image "Class" `rounded-lg shadow`) }}
         </div>
         <!-- mobile -->
-        <div class="d-block d-sm-none has-shapes" style="margin: auto;">
+        <div class="d-block d-sm-none has-shapes" style="margin: auto;padding-top: 40px;">
           {{ partial "image.html" (dict "Src" .image_mobile "Alt" .image_mobile "Class" `rounded-lg shadow`) }}
         </div>
       </div>
@@ -53,7 +53,15 @@
 {{ with .Params.features_new }}
 <section class="section-padding features new pt-0 overflow-hidden" data-aos="fade-in">
   <div class="container">
-    <div class="row justify-content-center">        
+    <div class="row justify-content-center">
+      <!-- title mobile view -->
+      <div class="d-block d-sm-none col-sm-4">
+        <p style="text-align: center;font-size: 22px; font-weight: bolder;color: black;">{{ .title | markdownify }}</p>
+      </div>
+      <!-- title desktop view -->
+      <div class="d-none d-sm-block">
+        <p style="text-align: center;font-size: 24px; font-weight: bolder;color: black;">{{ .title | markdownify }}</p>
+      </div>    
       <div class="row colored-icon-box" style="padding: 0%;">
         {{ range $i, $e:= .features_new_items }}
         <!-- desktop view -->
@@ -95,7 +103,7 @@
         <!-- Title subsection -->
         <div class="col-lg-7">
           <!-- desktop view -->
-           <div class="d-none d-sm-block align-items-center">
+          <div class="d-none d-sm-block align-items-center">
             <h2 style="text-align: left;font-size: 24px; font-weight: bolder;color: black;">{{ .title | markdownify }}</h2>
             <p style="text-align:justify;padding-bottom: 20px; padding-right: 20px;">{{ .content | markdownify }}</p>
           </div>
@@ -169,7 +177,7 @@
             {{ end }}                       
           </div>
           <!-- images for desktop div -->
-          <div class="d-none d-sm-block" style="position: relative;bottom: 450px;margin: auto;float:right;flex-wrap: wrap;">
+          <div class="d-none d-sm-block" style="position: relative;bottom: 430px;margin: auto;float:right;flex-wrap: wrap;">
             {{ partial "image.html" (dict "Src" .image "Alt" .image "Class" `rounded-lg shadow`) }}
           </div>           
         </div>
@@ -333,7 +341,7 @@
                   <div class="col-lg-10 mt-4 mt-lg-0 anim-to-bottom">                     
                     <li style="height: auto; background-color: rgb(242, 243, 243); padding-left: 40px; padding-right: 10px;padding-bottom: 5px;border-radius: 10px;">                    
                       <details>
-                        <summary style="list-style-position: outside;">                        
+                        <summary style="list-style-position: outside;height: 40px;">                        
                           {{ with .question}}
                           <p style="font-weight: bolder;font-size: 15px;color: black;">{{ . }}</p>
                           {{ end }}
